@@ -1,5 +1,5 @@
-#include "planet.h"
-#include "planet.cpp"
+#include "planets.h"
+#include "planets.cpp"
 //#include "ConsolCyr.h"
 using namespace std;
 
@@ -18,19 +18,22 @@ int main()
     Planet planets[Size];
     int n_planet;
     int ind;
+    planets p;
     while (true) {
         switch (menu())
         {
-            case 1: n_planet=read_db(file_name,planets,Size);
+            case 1: p.readFile();
+            break;
+/*             case 1: n_planet=read_db(file_name,planets,Size);
                 break;
-            case 2: write_db(file_name,planets,n_planet); break;
+           case 2: write_db(file_name,planets,n_planet); break;
             case 3: if((ind=find(planets,n_planet))>=0)
                     planets[ind].edit();
                 else
                     cout<<"Такой планеты нет"<<endl;
                 break;
             case 4: print_db(planets,n_planet); break;
-            case 5: sort_db(planets,n_planet); break;
+            case 5: sort_db(planets,n_planet); break;*/
             case 6: return 0;
             default: cout<<" Неправильный ввод"<<endl; break;
         }
