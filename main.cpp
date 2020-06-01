@@ -8,7 +8,6 @@
 using namespace std;
 
 //int read_db(char*, Planet*, const int);
-int  menu();
 //void print_db(Planet*, int);
 //int write_db(char*,Planet*, int);
 //int find(Planet*,int);
@@ -20,9 +19,9 @@ int main()
 {
       Menu m; //Создаем объект класса Menu
       //m.PrintMenu();
-    string file_name = "/home/uleo/CLionProjects/Semestr2/plantes.txt";
+    //string file_name = "/home/uleo/CLionProjects/Semestr2/plantes.txt";
     Planets p;
-    p.readFile(file_name);
+    p.opFile();
 
     int choice = 0;
     do
