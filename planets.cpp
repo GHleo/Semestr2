@@ -6,7 +6,7 @@ using namespace std;
 
 
     string line;
-    void Planets::readFile(string path)
+    void Planets::readFile(string path) //метод объявляется в заголовочном файле
     {
 
         ifstream in(path); // окрываем файл для чтения
