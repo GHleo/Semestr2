@@ -5,19 +5,27 @@ using namespace std;
 #include "planets.h"
 
 
-    string line;
-    void Planets::readFile(string path) //метод объявляется в заголовочном файле
-    {
 
-        ifstream in(path); // окрываем файл для чтения
-        cout << path << endl;
-        if (in.is_open())
+
+void Planets::readFile(string path) //метод объявляется в заголовочном файле
+    {
+        arr_size =  10;
+        ifstream file_in; // окрываем файл для чтения
+        file_in.open(path);
+        if (file_in.is_open())
         {
-            while (getline(in, line))
+
+            for (int i = 0; i < arr_size; i++)
             {
-                cout << line << endl;
+                file_in >> arr[i];// из потока записываем в массив
+
             }
         }
-        in.close();     // закрываем файл
+        file_in.close();     // закрываем файл
+        //выводим на консоль из массива
+        for (int i = 0; i < arr_size; i++)
+        {
+            cout << arr[i] << endl;
+        }
     }
 

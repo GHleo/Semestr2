@@ -7,7 +7,9 @@ using namespace std;
 
 class Planets {
 public:
+    int arr_size;
     void readFile(string path);
+    string arr[100];
 
 };
 
