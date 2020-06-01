@@ -1,4 +1,5 @@
 #include "planets.h"
+#include "planet.h"
 //#include "planets.cpp"
 #include "menu.h"
 //#include "menu.cpp"
@@ -19,9 +20,10 @@ int main()
 {
       Menu m; //Создаем объект класса Menu
       //m.PrintMenu();
-    //string file_name = "/home/uleo/CLionProjects/Semestr2/plantes.txt";
-    Planets p;
-    p.opFile();
+//string file_name = "/home/uleo/CLionProjects/Semestr2/plantes.txt";
+    string file_name = "/Users/ileo/CLionProjects/Semestr2/plantes.txt";
+    planet p;
+    p.rFile(file_name);
 
     int choice = 0;
     do
