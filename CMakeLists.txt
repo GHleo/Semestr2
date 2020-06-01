@@ -6,4 +6,4 @@ set(CMAKE_CXX_STANDARD 14)
 add_executable(Semestr2
          main.cpp
         #lab2.cpp
-           )
+        cmake-build-debug/planet.cpp cmake-build-debug/planet.h)

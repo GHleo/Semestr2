@@ -4,7 +4,7 @@
 
 using namespace std;
 
-
+int Planets::a() {cout << "sss" << endl;}
 void  Planets::opFile()//метод объявляется в заголовочном файле
     {
         arr_size =  10;
@@ -24,4 +24,5 @@ void  Planets::opFile()//метод объявляется в заголовоч
             cout << arr[i] << endl;
         }*/
     }
+
 

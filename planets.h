@@ -10,6 +10,7 @@ public:
     int arr_size;
     void  opFile();
     string arr[100];
+    int a();
 
 };
 
