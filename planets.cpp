@@ -1,24 +1,23 @@
-//
-// Created by iLeoMac on 2020-05-31.
-//
-
+#include <iostream>
+#include <fstream>
+#include <string>
+using namespace std;
 #include "planets.h"
-class planet
-{
-public:
-    std::string line;
 
-    void readFile(String path) {
-        std::ifstream in("D:\\hello.txt"); // окрываем файл для чтения
+
+    string line;
+    void Planets::readFile(string path)
+    {
+
+        ifstream in(path); // окрываем файл для чтения
+        cout << path << endl;
         if (in.is_open())
         {
             while (getline(in, line))
             {
-                std::cout << line << std::endl;
+                cout << line << endl;
             }
         }
         in.close();     // закрываем файл
     }
 
-
-};

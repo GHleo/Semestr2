@@ -3,7 +3,7 @@
 //#include "ConsolCyr.h"
 using namespace std;
 
-int read_db(char*, Planet*, const int);
+//int read_db(char*, Planet*, const int);
 int  menu();
 //void print_db(Planet*, int);
 //int write_db(char*,Planet*, int);
@@ -14,17 +14,17 @@ int  menu();
 
 int main()
 {
-    char *file_name = "sunsys.txt";
-    Planet planets[Size];
+    string file_name = "/home/uleo/CLionProjects/Semestr2/plantes.txt";
     int n_planet;
     int ind;
-    planets p;
+    Planets p;
+    p.readFile(file_name);
+/*
     while (true) {
         switch (menu())
         {
-            case 1: p.readFile();
-            break;
-/*             case 1: n_planet=read_db(file_name,planets,Size);
+
+            case 1: n_planet=read_db(file_name,planets,Size);
                 break;
            case 2: write_db(file_name,planets,n_planet); break;
             case 3: if((ind=find(planets,n_planet))>=0)
@@ -33,10 +33,11 @@ int main()
                     cout<<"Такой планеты нет"<<endl;
                 break;
             case 4: print_db(planets,n_planet); break;
-            case 5: sort_db(planets,n_planet); break;*/
+            case 5: sort_db(planets,n_planet); break;
             case 6: return 0;
             default: cout<<" Неправильный ввод"<<endl; break;
         }
     }
+    */
     return 0;
 }

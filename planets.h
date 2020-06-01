@@ -1,12 +1,13 @@
-//
-// Created by iLeoMac on 2020-05-31.
-//
 
 #ifndef SEMESTR2_PLANETS_H
 #define SEMESTR2_PLANETS_H
+#include <string>
+using namespace std;
 
 
-class planets {
+class Planets {
+public:
+    void readFile(string path);
 
 };
 
