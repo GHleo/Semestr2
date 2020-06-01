@@ -1,5 +1,9 @@
 #include "planets.h"
-#include "planets.cpp"
+//#include "planets.cpp"
+#include "menu.h"
+//#include "menu.cpp"
+#include <iostream>
+
 //#include "ConsolCyr.h"
 using namespace std;
 
@@ -14,11 +18,34 @@ int  menu();
 
 int main()
 {
+      Menu m; //Создаем объект класса Menu
+      //m.PrintMenu();
     string file_name = "/home/uleo/CLionProjects/Semestr2/plantes.txt";
-    int n_planet;
-    int ind;
     Planets p;
     p.readFile(file_name);
+
+    int choice = 0;
+    do
+    {
+        //system("cls");
+        m.DisplayMainMenu();
+        choice = m.GetInput();
+        switch(choice) {
+            case 1:
+                cout << "Pew pew!\n";
+                break;
+            case 2:
+                m.Options();
+                break;
+            case 3:
+                cout << "Exit!";
+                break;
+
+            default:
+                break;
+        }
+    } while(choice!=3);
+
 /*
     while (true) {
         switch (menu())
@@ -39,5 +66,9 @@ int main()
         }
     }
     */
+
+
+       // return EXIT_SUCCESS;
+
     return 0;
 }
